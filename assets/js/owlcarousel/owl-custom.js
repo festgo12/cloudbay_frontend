@@ -18,7 +18,8 @@ var owl_carousel_custom = {
         }),
         $('#carousel-profile').owlCarousel({
             loop:false,
-            margin:5,
+            // stagePadding: 50,
+            margin:-3,
             items:7,
             nav:false,
             dots: false,
@@ -29,12 +30,21 @@ var owl_carousel_custom = {
                 400:{
                     items:3
                 },
+                550:{
+                    items:4
+                },
                 600:{
                     items:5
                 },
+                850:{
+                    items:5
+                },
                 1000:{
-                    items:6
-                }
+                    items:7
+                },
+                1200:{
+                    items:8
+                },
             }
         }),
           $('#owl-carousel-2').owlCarousel({
@@ -70,7 +80,8 @@ var owl_carousel_custom = {
                     items:3
                 }
             }
-        }),$('#owl-carousel-4').owlCarousel({
+        }),
+        $('#owl-carousel-4').owlCarousel({
             items:5,
             loop:true,
             margin:10,
@@ -91,7 +102,8 @@ var owl_carousel_custom = {
 
                 }
             }
-        }),$('#owl-carousel-5').owlCarousel({
+        }),
+        $('#owl-carousel-5').owlCarousel({
             margin:10,
             loop:true,
             autoWidth:true,
@@ -375,6 +387,37 @@ var owl_carousel_custom = {
                 },
                 992 : {
                     items:3,
+                    mergeFit:true
+
+                }
+            }
+        }),
+            $('.play').on('click',function(){
+                owl.trigger('play.owl.autoplay',[1000])
+            }), $('.stop').on('click',function(){
+            owl.trigger('stop.owl.autoplay')
+        }),
+
+        $('#carousel-story').owlCarousel({
+            items:1,
+            loop:false,
+            margin:10,
+            dots: false,
+            autoplay:false,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            nav: false,
+            responsive:{
+                0 : {
+                    items:1,
+                    mergeFit:true
+                },
+                768 : {
+                    items:1,
+                    mergeFit:true
+                },
+                992 : {
+                    items:1,
                     mergeFit:true
 
                 }
